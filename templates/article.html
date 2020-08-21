@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block body %}
+  {% if article %}
+  <h1>{{article.title}}</h1>
+  <small>Created by {{article.author}} at {{article.created_at}}</small>
+  <hr>
+  <div>
+    {{article.body | safe}}
+  </div>
+  {% endif %}
+
+{% endblock %}
